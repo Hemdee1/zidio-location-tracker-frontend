@@ -1,0 +1,26 @@
+const userData = {
+    username: "JohnDoe",
+    email: "john@example.com",
+    location: "New York, USA",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+};
+
+// Function to fetch user data and populate the profile page
+function loadProfile() {
+    document.getElementById("username").textContent = userData.username;
+    document.getElementById("profile-pic").src = "profile-pic.jpg";
+    document.getElementById("user-info").innerHTML = `
+        <p><strong>Email:</strong> ${userData.email}</p>
+        <p><strong>Location:</strong> ${userData.location}</p>
+        <p><strong>Bio:</strong> ${userData.bio}</p>
+    `;
+}
+
+// Function to handle logout
+function logout() {
+    // Perform logout actions (e.g., clear session, redirect to login page)
+    alert("Logged out successfully!");
+}
+
+// Load profile when the page is loaded
+window.onload = loadProfile;
