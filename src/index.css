@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
@@ -10,15 +6,22 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   font-family: "Nunito", sans-serif;
   font-size: 22px;
   color: #fff;
 }
 
-body {
+.body {
   min-height: 100vh;
-  background-color: dodgerblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App {
@@ -31,14 +34,13 @@ body {
 }
 
 section {
-  width: 100%;
-  max-width: 420px;
+  width: 600px;
   min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: gray;
 }
 
 form {
@@ -71,6 +73,9 @@ button {
 
 button {
   padding: 0.5rem;
+  background-color: black;
+  cursor: pointer;
+  color: white;
 }
 
 .instructions {
@@ -116,4 +121,33 @@ button {
 
 .line {
   display: inline-block;
+}
+
+.map-cont {
+  width: 100%;
+}
+
+.heading {
+  margin: 0;
+  padding: 0px;
+  background-color: gray;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.heading h1 {
+  font-size: 1.2rem;
+}
+
+.nav-cont {
+  display: flex;
+  gap: 40px;
 }

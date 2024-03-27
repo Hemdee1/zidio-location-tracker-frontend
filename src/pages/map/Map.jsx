@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import * as maptilersdk from "@maptiler/sdk";
 import "@maptiler/sdk/dist/maptiler-sdk.css";
 import "./map.css";
+import Layout from "../../components/layout";
 
 const Map = () => {
   const mapContainer = useRef(null);
@@ -26,9 +27,11 @@ const Map = () => {
   }, [accra.lng, accra.lat, zoom]);
 
   return (
-    <div className="map-wrap">
-      <div ref={mapContainer} className="map" />
-    </div>
+    <Layout>
+      <div className="map-wrap">
+        <div ref={mapContainer} className="map" />
+      </div>
+    </Layout>
   );
 };
 export default Map;

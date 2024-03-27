@@ -5,14 +5,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/error.jsx";
 import Home from "./pages/home.jsx";
 import Login from "./pages/login.jsx";
-import Signup from "./pages/signup.jsx";
+import Register from "./pages/signup.jsx";
 import Profile from "./pages/profile.jsx";
-import Map from "./pages/map.jsx";
+import Map from "./pages/map/Map.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Map />,
     errorElement: <ErrorPage />,
   },
   {
@@ -21,15 +21,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/signup",
-    element: <Signup />,
+    element: <Register />,
   },
   {
     path: "/profile",
     element: <Profile />,
-  },
-  {
-    path: "/map",
-    element: <Map />,
   },
 ]);
 
